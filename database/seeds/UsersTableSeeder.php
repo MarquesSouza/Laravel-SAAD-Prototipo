@@ -13,7 +13,10 @@ class UsersTableSeeder extends Seeder
     {
         factory(\App\User::class)->create([
             'email' => 'jonasjunior@ifto.edu.br',
-            'name'  => 'jonas'
+            'name'  => 'jonas',
+            'password'=>  bcrypt('123'),
+            'cpf'=> '00000000000',
+            'telefone'=>'000000000'
         ]);
     }
 }
