@@ -15,8 +15,11 @@ class CreatePPCSTable extends Migration
 	{
 		Schema::create('p_p_c_s', function(Blueprint $table) {
             $table->increments('id');
-
+            $table->string('nome');
+            $table->longText('descricao');
+            $table->boolean('status');
             $table->timestamps();
+
 		});
 	}
 

@@ -15,7 +15,10 @@ class CreateCoresTable extends Migration
 	{
 		Schema::create('cores', function(Blueprint $table) {
             $table->increments('id');
-
+            $table->string('nome');
+            $table->longText('descricao');
+            $table->boolean('status');
+            $table->integer('matricula');
             $table->timestamps();
 		});
 	}
