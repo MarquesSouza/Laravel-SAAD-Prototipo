@@ -15,8 +15,9 @@ class UsersTableSeeder extends Seeder
             'email' => 'jonasjunior@ifto.edu.br',
             'name'  => 'jonas',
             'password'=>  bcrypt('123'),
-            'cpf'=> '00000000000',
-            'telefone'=>'000000000'
+            'matricula'=> '00000000000',
+            'telefone'=>'000000000',
+            'status'=>'1',
         ]);
     }
 }
