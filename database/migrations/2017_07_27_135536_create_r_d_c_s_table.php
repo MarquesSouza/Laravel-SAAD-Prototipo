@@ -15,7 +15,11 @@ class CreateRDCSTable extends Migration
 	{
 		Schema::create('r_d_c_s', function(Blueprint $table) {
             $table->increments('id');
-
+            $table->string('nome');
+            $table->longText('descricao');
+            $table->boolean('status');
+            $table->dateTime('periodo_inicio');
+            $table->dateTime('periodo_conclusao');
             $table->timestamps();
 		});
 	}

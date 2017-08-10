@@ -18,8 +18,12 @@ class CreateActivitiesTable extends Migration
             $table->string('nome');
             $table->longText('descricao');
             $table->boolean('status');
-            $table->integer('cargahoraria');
-            $table->integer('periodo');
+            $table->double('carga_horaria');
+            $table->double('carga_horaria_anual');
+            $table->double('carga_horaria_semanal');
+            $table->string('ambiente_recomendado');
+            $table->string('ambiente_eventual');
+            $table->integer('fator_mutiplicador');
             $table->timestamps();
 		});
 	}

@@ -15,7 +15,8 @@ class CreateAllocationsTable extends Migration
 	{
 		Schema::create('allocations', function(Blueprint $table) {
             $table->increments('id');
-
+            $table->double('carga_horaria_minima');
+            $table->double('carga_horaria_maxima');
             $table->timestamps();
 		});
 	}
