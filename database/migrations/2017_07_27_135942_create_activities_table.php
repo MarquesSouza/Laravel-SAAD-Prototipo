@@ -25,8 +25,8 @@ class CreateActivitiesTable extends Migration
             $table->string('ambiente_eventual');
             $table->integer('fator_mutiplicador');
 
-            $table->integer('id_tipoAtivity')->unsigned();
-            $table->foreign('id_tipoAtivity')->references('id')->on('type_activities')->onDelete('cascade');
+            $table->integer('id_typeActivity')->unsigned();
+            $table->foreign('id_typeActivity')->references('id')->on('type_activities')->onDelete('cascade');
 
             $table->integer('id_nucleo')->unsigned();
             $table->foreign('id_nucleo')->references('id')->on('cores')->onDelete('cascade');

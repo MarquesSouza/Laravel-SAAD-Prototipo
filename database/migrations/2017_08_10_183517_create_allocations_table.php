@@ -23,7 +23,7 @@ class CreateAllocationsTable extends Migration
 
             $table->integer('id_rdc')->unsigned();
             $table->foreign('id_rdc')->references('id')->on('r_d_c_s')->onDelete('cascade');
-
+            $table->boolean('status');
             $table->timestamps();
 		});
 	}

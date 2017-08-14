@@ -24,7 +24,7 @@ class CreateTasksTable extends Migration
 
             $table->integer('id_allocation')->unsigned();
             $table->foreign('id_allocation')->references('id')->on('allocations')->onDelete('cascade');
-
+            $table->boolean('status');
             $table->timestamps();
 		});
 	}
