@@ -16,6 +16,14 @@ class CreateActivityPCCsTable extends Migration
 		Schema::create('activity_p_c_cs', function(Blueprint $table) {
             $table->increments('id');
 
+            $table->integer('id_activity')->unsigned();
+            $table->foreign('id_activity')->references('id')->on('activities')->onDelete('cascade');
+
+            $table->integer('id_ppc')->unsigned();
+            $table->foreign('id_ppc')->references('id')->on('p_p_c_s')->onDelete('cascade');
+
+            $table->boolean('status');
+            $table->integer('periodo');
             $table->timestamps();
 		});
 	}

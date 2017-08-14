@@ -21,6 +21,10 @@ class CreateUsersTable extends Migration
             $table->string( 'telefone');
             $table->string('password');
             $table->boolean('status');
+
+            $table->integer('id_cores')->unsigned();
+            $table->foreign('id_cores')->references('id')->on('cores')->onDelete('cascade');
+
             $table->rememberToken();
             $table->timestamps();
         });

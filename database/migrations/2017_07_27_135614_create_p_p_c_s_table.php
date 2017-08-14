@@ -18,6 +18,10 @@ class CreatePPCSTable extends Migration
             $table->string('nome');
             $table->longText('descricao');
             $table->boolean('status');
+
+            $table->integer('id_modalidade')->unsigned();
+            $table->foreign('id_modalidade')->references('id')->on('modalities')->onDelete('cascade');
+
             $table->timestamps();
 
 		});

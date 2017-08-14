@@ -17,6 +17,13 @@ class CreateAllocationsTable extends Migration
             $table->increments('id');
             $table->double('carga_horaria_minima');
             $table->double('carga_horaria_maxima');
+
+            $table->integer('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('cascade');
+
+            $table->integer('id_rdc')->unsigned();
+            $table->foreign('id_rdc')->references('id')->on('r_d_c_s')->onDelete('cascade');
+
             $table->timestamps();
 		});
 	}
