@@ -49,8 +49,8 @@ class ActivitiesController extends Controller
                 'data' => $activities,
             ]);
         }
-
-        return view('activities.index', compact('activities'));
+        return $activities;
+//        return view('activities.index', compact('activities'));
     }
 
     /**
