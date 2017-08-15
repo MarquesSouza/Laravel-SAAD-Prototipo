@@ -49,8 +49,8 @@ class UsersController extends Controller
                 'data' => $users,
             ]);
         }
-
-        return view('users.index', compact('users'));
+        return $users;
+        //return view('users.index', compact('users'));
     }
 
     /**

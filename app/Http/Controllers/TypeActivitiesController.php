@@ -49,8 +49,8 @@ class TypeActivitiesController extends Controller
                 'data' => $typeActivities,
             ]);
         }
-
-        return view('typeActivities.index', compact('typeActivities'));
+        return $typeActivities;
+       // return view('typeActivities.index', compact('typeActivities'));
     }
 
     /**

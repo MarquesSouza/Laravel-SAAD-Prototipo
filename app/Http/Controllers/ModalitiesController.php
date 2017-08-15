@@ -49,8 +49,8 @@ class ModalitiesController extends Controller
                 'data' => $modalities,
             ]);
         }
-
-        return view('modalities.index', compact('modalities'));
+        return $modalities;
+        //return view('modalities.index', compact('modalities'));
     }
 
     /**

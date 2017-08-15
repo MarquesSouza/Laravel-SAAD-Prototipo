@@ -49,8 +49,8 @@ class TypeUsersController extends Controller
                 'data' => $typeUsers,
             ]);
         }
-
-        return view('typeUsers.index', compact('typeUsers'));
+        return $typeUsers;
+        //return view('typeUsers.index', compact('typeUsers'));
     }
 
     /**

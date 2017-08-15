@@ -49,8 +49,8 @@ class TasksController extends Controller
                 'data' => $tasks,
             ]);
         }
-
-        return view('tasks.index', compact('tasks'));
+        return $tasks;
+        //return view('tasks.index', compact('tasks'));
     }
 
     /**

@@ -49,8 +49,8 @@ class AllocationsController extends Controller
                 'data' => $allocations,
             ]);
         }
-
-        return view('allocations.index', compact('allocations'));
+        return $allocations;
+        //return view('allocations.index', compact('allocations'));
     }
 
     /**

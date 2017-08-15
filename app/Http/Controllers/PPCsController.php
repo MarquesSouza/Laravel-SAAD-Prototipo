@@ -49,8 +49,8 @@ class PPCsController extends Controller
                 'data' => $pPCs,
             ]);
         }
-
-        return view('pPCs.index', compact('pPCs'));
+        return $pPCs;
+        //return view('pPCs.index', compact('pPCs'));
     }
 
     /**

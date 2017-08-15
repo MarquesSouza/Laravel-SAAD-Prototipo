@@ -49,8 +49,8 @@ class CoresController extends Controller
                 'data' => $cores,
             ]);
         }
-
-        return view('cores.index', compact('cores'));
+        return $cores;
+//        return view('cores.index', compact('cores'));
     }
 
     /**

@@ -49,8 +49,8 @@ class RDCsController extends Controller
                 'data' => $rDCs,
             ]);
         }
-
-        return view('rDCs.index', compact('rDCs'));
+        return $rDCs;
+        //return view('rDCs.index', compact('rDCs'));
     }
 
     /**

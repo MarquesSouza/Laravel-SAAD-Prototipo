@@ -49,8 +49,8 @@ class ActivityPCCsController extends Controller
                 'data' => $activityPCCs,
             ]);
         }
-
-        return view('activityPCCs.index', compact('activityPCCs'));
+        return $activityPCCs;
+        //return view('activityPCCs.index', compact('activityPCCs'));
     }
 
     /**

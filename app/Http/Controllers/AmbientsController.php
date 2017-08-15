@@ -49,8 +49,8 @@ class AmbientsController extends Controller
                 'data' => $ambients,
             ]);
         }
-
-        return view('ambients.index', compact('ambients'));
+        return $ambients;
+       // return view('ambients.index', compact('ambients'));
     }
 
     /**
